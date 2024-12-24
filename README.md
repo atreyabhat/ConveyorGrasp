@@ -1,7 +1,42 @@
-# ConveyorGrasp
-A simulation to Detect, Track, Synthesize Grasp and execute grasp for objects on a moving conveyor belt.
+# Vision-Based Robotic Manipulation: Pick-and-Place from Moving Conveyors
+
+This project develops a robotic system for precise pick-and-place operations on moving conveyor belts, focusing on dynamic and cluttered environments. A dual-camera setup ensures reliable object detection, tracking, and grasping using fine-tuned algorithms and real-time control.
+
+---
+
+## Key Features
+- **Dual-Camera System**:
+  - Overhead camera for initial object detection and tracking.
+  - Eye-in-hand camera for position correction near the grasp point.
+- **Algorithmic Integration**:
+  - **YOLO**: Object detection fine-tuned on YCB dataset.
+  - **GRConvNet**: Grasp synthesis with RGB-D inputs for real-time grasp generation.
+- **Dynamic Control Loop**: Real-time end-effector adjustments based on object position updates and grasp planning.
+
+---
+
+## Implementation
+1. **Object Detection**:
+   - Overhead camera detects objects and tracks their movement.
+   - In-hand camera refines object positions for final grasp.
+2. **Grasp Planning**:
+   - GRConvNet generates grasp parameters, including position, angle, and gripper width.
+3. **Motion Control**:
+   - MoveIt framework handles manipulator movement and end-effector adjustments.
+4. **End-to-End Process**:
+   - Objects are detected, tracked, re-evaluated dynamically, grasped, and placed.
+
+---
+
+## Results
+- **Position Error Robustness**: Corrects position errors up to 9 cm.
+- **Conveyor Speed**: Reliable grasps at speeds up to 0.04 m/s.
+- **Clutter Handling**: Adaptive cropping improves accuracy in dense environments.
+
 
 ![image](https://github.com/user-attachments/assets/8a3769be-1846-4550-ab78-e30d3b7b74c3)
+
+![image](https://github.com/user-attachments/assets/0ea7376b-f661-4d98-a26e-9ef2719abae5)
 
 
 ### To launch the environment:
