@@ -1,6 +1,9 @@
 # ConveyorGrasp
 A simulation to Detect, Track, Synthesize Grasp and execute grasp for objects on a moving conveyor belt.
 
+![image](https://github.com/user-attachments/assets/8a3769be-1846-4550-ab78-e30d3b7b74c3)
+
+
 ### To launch the environment:
 ```bash
 ros2 launch panda_ros2_moveit2 panda_interface.launch.py
